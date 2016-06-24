@@ -38,7 +38,8 @@ for rootFolder in argv[1:]:
 		lbcId = lbcFolder.split("/")[-1]
 		sequences[rootFolder][lbcId] = {}
 		
-		# dr2s idiosyncracy : for barcodes starting with ID, dr2s seems to output a single subfolder with name form - HLA-DPB1.ref.alt
+		# dr2s idiosyncracy : for barcodes starting with ID, dr2s seems to output a single subfolder 
+		# with name form - HLA-DPB1.ref.alt
 		if lbcId.find("ID") != -1: lbcFolder = glob(path.join(lbcFolder,"*"))[0] 
 	
 		for hapName in hapNames:
